@@ -1,0 +1,37 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul{
+  margin-left: 20px !important;
+}
+a{
+  text-decoration: none !important;
+}
+.header_color{
+  background-color: #637E76 !important;
+}
+.main_section{
+  display: grid ;
+  grid-template-columns: repeat(4,1fr) ;
+  gap: 20px;
+}
+.main_menu{
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 20px 0px;
+}
+.main_menu li{
+  margin: 0 20px;
+}
+.main_menu li a{
+  color: black !important;
+  text-transform: uppercase;
+  text-decoration: none !important;
+}
+td{
+  text-align: left;
+  padding: 10px;
+}
