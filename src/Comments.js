@@ -3,22 +3,27 @@ import './App.css';
 import Table from 'react-bootstrap/Table';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import Datafetch from "./Datafetch";
 
 function Comments(){
 
-    const [data,setdata] = useState([]);
+    const [data,setData] = useState([]);
   
-    useEffect(()=>{
-      axios.get('https://jsonplaceholder.typicode.com/comments')
-    .then(function (response) {
-      console.log(response.data);
-      setdata(response.data);
-    })
-    .catch(function (error) {
-      // handle error
-      console.log(error);
-    });
-    },[])
+    // useEffect(()=>{
+    //   axios.get('https://jsonplaceholder.typicode.com/comments')
+    // .then(function (response) {
+    //   console.log(response.data);
+    //   setdata(response.data);
+    // })
+    // .catch(function (error) {
+    //   // handle error
+    //   console.log(error);
+    // });
+    // },[])
+
+    useEffect(() => {
+        Datafetch('comments', setData);
+    }, []);
 
     return(
         <>
